@@ -23,6 +23,14 @@ curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d
 docker-compose --build
 ```
 
+### Create Table structure
+
 ```
 aws dynamodb create-table --cli-input-json file://user.json  --endpoint-url http://localhost:8000
+```
+
+### Insert data and get response
+
+```
+curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
 ```
